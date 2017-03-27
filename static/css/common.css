@@ -1,0 +1,39 @@
+.border-1px {
+  position: relative;
+}
+.border-1px:after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  border: 1px solid rgba(7, 17, 27, 0.1);
+}
+.border-1px.top:after {
+  top: 0;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5){
+  .border-1px:after {
+    -webkit-transform: scaleY(.7);
+    transform: scaleY(.7);
+   }
+}
+@media (-webkit-min-device-pixel-ratio: 2){
+  .border-1px:after {
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+   }
+}
+@media (-webkit-min-device-pixel-ratio: 3){
+  .border-1px:after {
+    -webkit-transform: scaleY(0.3);
+    transform: scaleY(.3);
+   }
+}
+
+.bar {
+  height: 16px;
+  border-top: 1px solid rgba(7, 17, 27, 0.1);
+  border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+  background: #f3f5f7;
+}
